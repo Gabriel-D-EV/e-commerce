@@ -2,7 +2,9 @@ import flet as ft
 
 
 def main(page: ft.page):
+    page.title = "E-Commerce"
     page.bgcolor = ft.colors.BLACK
+    page.vertical_alignment = ft.MainAxisAlignment.CENTER
 
     def charge_main_image(e):
         for item in options.controls:
@@ -16,20 +18,20 @@ def main(page: ft.page):
         options.update()
 
     produto_imagem = ft.Container(
-        bgcolor='#f1f1f1',
-        padding=ft.padding.all(20),
+        bgcolor='#c9c9c9',
+        padding=ft.padding.all(30),
         aspect_ratio=9/16,
         content=ft.Column(
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             controls=[
                 main_image := ft.Image(
-                    src='./imagens/rx3060-frent.png',
+                    src='./imagens/rx3060-fr.png'
                 ),
                 options := ft.Row(
                     alignment=ft.MainAxisAlignment.CENTER,
                     controls=[
                         ft.Container(
-                            image_src='./imagens/rx3060-frent.png',
+                            image_src='./imagens/rx3060-fr.png',
                             width=50,
                             height=50,
                             opacity=1,
