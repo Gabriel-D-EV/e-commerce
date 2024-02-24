@@ -5,11 +5,19 @@ def main(page: ft.page):
     page.bgcolor = ft.colors.BLACK
 
     def charge_main_image(e):
-        ...
+        for item in options.controls:
+            if item == e.control:
+                item.opacity = 1
+                main_image.src = item.image_src
+            else:
+                item.opacity = 0.5
+                
+        main_image.update()
+        options.update()
 
     produto_imagem = ft.Container(
-        bgcolor='#121212',
-        padding=ft.padding.all(30),
+        bgcolor='#f1f1f1',
+        padding=ft.padding.all(20),
         aspect_ratio=9/16,
         content=ft.Column(
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
@@ -24,7 +32,6 @@ def main(page: ft.page):
                             image_src='./imagens/rx3060-frent.png',
                             width=50,
                             height=50,
-                            margin=ft.margin.all(10),
                             opacity=1,
                             on_click=charge_main_image
                         ),
@@ -32,7 +39,6 @@ def main(page: ft.page):
                             image_src='./imagens/rx3060-diag.png',
                             width=50,
                             height=50,
-                            margin=ft.margin.all(10),
                             opacity=0.5,
                             on_click=charge_main_image
                         ),
@@ -40,7 +46,6 @@ def main(page: ft.page):
                             image_src='./imagens/rx3060-bp.png',
                             width=50,
                             height=50,
-                            margin=ft.margin.all(10),
                             opacity=0.5,
                             on_click=charge_main_image
                         )
@@ -50,7 +55,16 @@ def main(page: ft.page):
         )
     )
 
-    produto_dados = ft.Container()
+    produto_dados = ft.Container(
+        padding=ft.padding.all(30),
+        bgcolor='#121212',
+        aspect_ratio=9/16,
+        content=ft.Column(
+            controls=[
+                
+            ]
+        )
+    )
 
     layout = ft.Container(
         width=600,
