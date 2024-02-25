@@ -63,7 +63,43 @@ def main(page: ft.page):
         aspect_ratio=9/16,
         content=ft.Column(
             controls=[
-                
+                ft.Text(
+                    value='GPU',
+                    color='#8a2be2',
+                    weight=ft.FontWeight.BOLD,
+                ),
+                ft.Text(
+                    value='Geforce RTX-3060',
+                    color='#ffffff',
+                    weight=ft.FontWeight.BOLD,
+                    size=30
+                ),
+                ft.Text(
+                    value='12GB, GDDR6, DLSS, Ray Tracing, NOVO',
+                    color='#c8c8d8',
+                    italic=True
+                ),
+                ft.ResponsiveRow(
+                    columns=12,
+                    controls=[
+                        ft.Text(
+                            col={'xs': 12, 'sm': 6},
+                            value='R$ 1700,00',
+                            color=ft.colors.WHITE,
+                            weight=ft.FontWeight.BOLD,
+                            size=30
+                        ),
+                        ft.Row(
+                            col={'xs': 12, 'sm': 6},
+                            controls=[
+                                ft.Icon(
+                                    name=ft.icons.STAR,
+                                    color=ft.colors.AMBER
+                                ) for i in range(5)
+                            ]
+                        )
+                    ]
+                )
             ]
         )
     )
@@ -77,13 +113,14 @@ def main(page: ft.page):
             spacing=0,
             run_spacing=0,
             controls=[
-                produto_imagem,
+                #produto_imagem,
                 produto_dados
             ]
         )
     )
-
+    
     page.add(layout)
+    
 
 
 if __name__ == '__main__':
