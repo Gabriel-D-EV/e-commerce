@@ -27,27 +27,27 @@ def main(page: ft.page):
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             controls=[
                 main_image := ft.Image(
-                    src='./imagens/rx3060-fr.png'
+                    src='imagens/rx3060-fr.png'
                 ),
                 options := ft.Row(
                     alignment=ft.MainAxisAlignment.CENTER,
                     controls=[
                         ft.Container(
-                            image_src='./imagens/rx3060-fr.png',
+                            image_src='imagens/rx3060-fr.png',
                             width=50,
                             height=50,
                             opacity=1,
                             on_click=charge_main_image
                         ),
                         ft.Container(
-                            image_src='./imagens/rx3060-diag.png',
+                            image_src='imagens/rx3060-diag.png',
                             width=50,
                             height=50,
                             opacity=0.5,
                             on_click=charge_main_image
                         ),
                         ft.Container(
-                            image_src='./imagens/rx3060-bp.png',
+                            image_src='imagens/rx3060-bp.png',
                             width=50,
                             height=50,
                             opacity=0.5,
@@ -91,14 +91,15 @@ def main(page: ft.page):
                             value='R$ 1700,00',
                             color=ft.colors.WHITE,
                             weight=ft.FontWeight.BOLD,
-                            size=30
+                            size=25
                         ),
                         ft.Row(
                             col={'xs': 12, 'sm': 6},
                             controls=[
                                 ft.Icon(
                                     name=ft.icons.STAR,
-                                    color=ft.colors.AMBER
+                                    color=ft.colors.AMBER,
+                                    size=15
                                 ) for i in range(5)
                             ]
                         )
