@@ -27,27 +27,27 @@ def main(page: ft.page):
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             controls=[
                 main_image := ft.Image(
-                    src='imagens/rx3060-fr.png'
+                    src='https://github.com/Gabriel-D-EV/e-commerce/blob/main/imagens/rx3060-fr.png?raw=true'
                 ),
                 options := ft.Row(
                     alignment=ft.MainAxisAlignment.CENTER,
                     controls=[
                         ft.Container(
-                            image_src='imagens/rx3060-fr.png',
+                            image_src='https://github.com/Gabriel-D-EV/e-commerce/blob/main/imagens/rx3060-fr.png?raw=true',
                             width=50,
                             height=50,
                             opacity=1,
                             on_click=charge_main_image
                         ),
                         ft.Container(
-                            image_src='imagens/rx3060-diag.png',
+                            image_src='https://github.com/Gabriel-D-EV/e-commerce/blob/main/imagens/rx3060-diag.png?raw=true',
                             width=50,
                             height=50,
                             opacity=0.5,
                             on_click=charge_main_image
                         ),
                         ft.Container(
-                            image_src='imagens/rx3060-bp.png',
+                            image_src='https://github.com/Gabriel-D-EV/e-commerce/blob/main/imagens/rx3060-bp.png?raw=true',
                             width=50,
                             height=50,
                             opacity=0.5,
@@ -61,7 +61,7 @@ def main(page: ft.page):
 
     produto_dados = ft.Container(
         col={'xs': 12, 'md': 6},
-        padding=ft.padding.all(30),
+        padding=ft.padding.all(15),
         bgcolor='#121212',
         aspect_ratio=9/16,
         content=ft.Column(
@@ -75,7 +75,7 @@ def main(page: ft.page):
                     value='Geforce RTX-3060',
                     color='#ffffff',
                     weight=ft.FontWeight.BOLD,
-                    size=30
+                    size=25
                 ),
                 ft.Text(
                     value='12GB, GDDR6, DLSS, Ray Tracing, NOVO',
@@ -91,7 +91,7 @@ def main(page: ft.page):
                             value='R$ 1700,00',
                             color=ft.colors.WHITE,
                             weight=ft.FontWeight.BOLD,
-                            size=25
+                            size=20
                         ),
                         ft.Row(
                             col={'xs': 12, 'sm': 6},
@@ -99,7 +99,7 @@ def main(page: ft.page):
                                 ft.Icon(
                                     name=ft.icons.STAR,
                                     color=ft.colors.AMBER,
-                                    size=15
+                                    size=12
                                 ) for i in range(5)
                             ]
                         )
@@ -152,7 +152,7 @@ def main(page: ft.page):
                 ),
                 ft.Container(expand=True),
                 ft.ElevatedButton(
-                    width=700,
+                    width=600,
                     text='Adicionar a lista de desejos',
                     style=ft.ButtonStyle(
                         padding=ft.padding.all(20),
@@ -171,7 +171,7 @@ def main(page: ft.page):
                     )
                 ),
                 ft.ElevatedButton(
-                    width=700,
+                    width=600,
                     text='Adicionar ao carrinho',
                     style=ft.ButtonStyle(
                         padding=ft.padding.all(20),
@@ -194,7 +194,7 @@ def main(page: ft.page):
     )
 
     layout = ft.Container(
-        width=700,
+        width=750,
         margin=ft.margin.all(30),
         shadow=ft.BoxShadow(blur_radius=20, color='#8a2be2'),
         content=ft.ResponsiveRow(
@@ -213,3 +213,5 @@ def main(page: ft.page):
 
 if __name__ == '__main__':
     ft.app(target=main)
+
+# view=ft.AppView.WEB_BROWSER
